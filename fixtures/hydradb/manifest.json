@@ -1,0 +1,13 @@
+{
+  "customers": 6,
+  "edges": 19,
+  "edges.jsonl_sha256": "8f121ec5ede78a35827767c2d925050cb20d9c752be9f1edaf3f247c89698865",
+  "executions": 12,
+  "functions": 13,
+  "functions.json_sha256": "3cb3170e3d3863bcd4a0beb617a341b1f62a1b7d2e33b26570f549df35e55bd3",
+  "memories": 6,
+  "nodes": 43,
+  "nodes.jsonl_sha256": "c9e47519533cc5e45e7f248b5ea479a8f558e0a4a3a183bad2804384f4e5026a",
+  "note": "Portable Iolaus fixture. The source-build adapter must map labels/properties to the exact HydraDB import schema discovered in the checked-out HydraDB revision; do not guess field names.",
+  "schema": "iolaus.hydradb.fixture.v1"
+}

@@ -1,0 +1,67 @@
+name = "HydraFragileBench v1"
+trials_per_scenario = 1000
+seed = 20260819
+
+[[scenario]]
+id = "chief.crm_silent_write"
+kind = "crm_silent_write"
+cookbook = "AI Chief of Staff - Function Routing"
+fault_probability = 0.15
+verifier_attempts = 2
+verifier_backoff_ms = 5
+
+[[scenario]]
+id = "chief.deploy_false_green"
+kind = "deploy_false_green"
+cookbook = "AI Chief of Staff - Function Routing"
+fault_probability = 0.12
+verifier_attempts = 3
+verifier_backoff_ms = 5
+
+[[scenario]]
+id = "chief.cascade_welcome"
+kind = "cascade_welcome"
+cookbook = "AI Chief of Staff - Function Routing"
+fault_probability = 0.15
+verifier_attempts = 2
+verifier_backoff_ms = 5
+
+[[scenario]]
+id = "support.false_handoff"
+kind = "support_false_handoff"
+cookbook = "AI Customer Support Agent with Memory"
+fault_probability = 0.10
+verifier_attempts = 2
+verifier_backoff_ms = 5
+
+[[scenario]]
+id = "onboarding.accepted_not_indexed"
+kind = "accepted_not_indexed"
+cookbook = "AI Onboarding Agent"
+fault_probability = 0.18
+verifier_attempts = 3
+verifier_backoff_ms = 5
+
+[[scenario]]
+id = "finance.empty_evidence"
+kind = "empty_evidence"
+cookbook = "AI Financial Analyst with Memory"
+fault_probability = 0.12
+verifier_attempts = 1
+verifier_backoff_ms = 0
+
+[[scenario]]
+id = "finance.wrong_period"
+kind = "wrong_period"
+cookbook = "AI Financial Analyst with Memory"
+fault_probability = 0.12
+verifier_attempts = 1
+verifier_backoff_ms = 0
+
+[[scenario]]
+id = "intel.unverified_briefing"
+kind = "unverified_briefing"
+cookbook = "AI Competitive Intelligence Agent"
+fault_probability = 0.15
+verifier_attempts = 3
+verifier_backoff_ms = 5

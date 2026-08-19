@@ -1,0 +1,106 @@
+{
+  "schema": "iolaus.hydradb.live.tasks.v1",
+  "tasks": [
+    {
+      "expected_function": "create_customer",
+      "expected_params": {
+        "email": "alice@example.test",
+        "id": "alice"
+      },
+      "id": "chief.crm_silent_write",
+      "kind": "crm_silent_write",
+      "tasks": [
+        "Add Alice to the CRM with id alice and email alice@example.test.",
+        "Create CRM customer alice using alice@example.test."
+      ]
+    },
+    {
+      "expected_function": "trigger_deployment",
+      "expected_params": {
+        "service": "api"
+      },
+      "id": "chief.deploy_false_green",
+      "kind": "deploy_false_green",
+      "tasks": [
+        "Deploy the api service.",
+        "Trigger a deployment for service api."
+      ]
+    },
+    {
+      "expected_function": "create_customer",
+      "expected_params": {
+        "email": "alice@example.test",
+        "id": "alice"
+      },
+      "id": "chief.cascade_welcome",
+      "kind": "cascade_welcome",
+      "tasks": [
+        "Create customer alice at alice@example.test, then welcome them only after creation is confirmed.",
+        "Register alice in CRM using alice@example.test before the welcome step."
+      ]
+    },
+    {
+      "expected_function": "escalate_to_human",
+      "expected_params": {
+        "ticket_id": "TCK-42"
+      },
+      "id": "support.false_handoff",
+      "kind": "support_false_handoff",
+      "tasks": [
+        "Escalate support ticket TCK-42 to a human.",
+        "Queue ticket TCK-42 for human support."
+      ]
+    },
+    {
+      "expected_function": "upload_knowledge",
+      "expected_params": {
+        "source_id": "source-1"
+      },
+      "id": "onboarding.accepted_not_indexed",
+      "kind": "accepted_not_indexed",
+      "tasks": [
+        "Upload onboarding source source-1 for indexing.",
+        "Add source-1 to the onboarding knowledge base."
+      ]
+    },
+    {
+      "expected_function": "answer_financial_question",
+      "expected_params": {
+        "period": "Q4-2025",
+        "question": "What was gross margin in Q4 2025?"
+      },
+      "id": "finance.empty_evidence",
+      "kind": "empty_evidence",
+      "tasks": [
+        "What was gross margin in Q4 2025?",
+        "Answer the gross-margin question for Q4-2025."
+      ]
+    },
+    {
+      "expected_function": "answer_financial_question",
+      "expected_params": {
+        "period": "Q4-2025",
+        "question": "What was gross margin in Q4 2025?"
+      },
+      "id": "finance.wrong_period",
+      "kind": "wrong_period",
+      "tasks": [
+        "Use Q4 2025 evidence to answer the gross-margin question.",
+        "Report gross margin for Q4-2025 only."
+      ]
+    },
+    {
+      "expected_function": "generate_competitive_briefing",
+      "expected_params": {
+        "audience": "executive",
+        "source_id": "source-1"
+      },
+      "id": "intel.unverified_briefing",
+      "kind": "unverified_briefing",
+      "tasks": [
+        "Prepare an executive competitor briefing from source-1 after the source is ready.",
+        "Generate the executive competitive-intelligence brief from source-1."
+      ]
+    }
+  ]
+}

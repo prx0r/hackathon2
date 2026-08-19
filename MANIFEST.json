@@ -1,0 +1,286 @@
+{
+  "files": {
+    ".github/workflows/ci.yml": {
+      "bytes": 1602,
+      "sha256": "f00eab918cb1c9da8275737436d9fc0305642a22c0a67d461cd589436f64b8b2"
+    },
+    ".gitignore": {
+      "bytes": 67,
+      "sha256": "b7955e1300dc726ae657f0cb3e39305da94c2d4c8873265f9658f27b11f9f6b6"
+    },
+    "ANTI_CHEAT.md": {
+      "bytes": 3301,
+      "sha256": "e598233a176e92215c51adbcc783ec909cf21f350bfb3435e0655db4313849c8"
+    },
+    "BENCHMARK_DESIGN_LIVE.md": {
+      "bytes": 4876,
+      "sha256": "3fdc5bdc50b101011a34de3ed124f57bf6d0e5d3b63c17505fada51cabcd37a1"
+    },
+    "BENCHMARK_PROTOCOL.md": {
+      "bytes": 5854,
+      "sha256": "c3263284b49c2ca201a007e98650b1d83da3c815bc98ee5723762021eeddb01a"
+    },
+    "BUILD_NOTES.md": {
+      "bytes": 1985,
+      "sha256": "84f2ff1efe5e5ccda8290b74866918ef143bd6589ce27347fec2775d7ccdd845"
+    },
+    "Cargo.toml": {
+      "bytes": 1124,
+      "sha256": "3b22ee4267ff2ad71d2686ced547856c866efbc56602aa2309d575c904bf57f1"
+    },
+    "DEMO.md": {
+      "bytes": 3207,
+      "sha256": "c7217f471cfeebb944e0eab26b238d9f212197652328f87e1c534d470f46cd70"
+    },
+    "Dockerfile": {
+      "bytes": 435,
+      "sha256": "0a5b4a5caf30d296285fab73c7c8ed3da8a9e38c71a1addd17ac19d64b8290b0"
+    },
+    "EXTERNAL_AGENT_RUNBOOK.md": {
+      "bytes": 11238,
+      "sha256": "0d2247644f77b99d28e1c7f41e4b32f8fbf4d4e3edf49a6e06dd30888c584ec4"
+    },
+    "FINAL_RELEASE_GATE.md": {
+      "bytes": 2399,
+      "sha256": "7cf82db8a19969bb7ac47e5124ad6624eebf9746107cf18a9407fcf6ed5770f6"
+    },
+    "HERMES_INTEGRATION.md": {
+      "bytes": 2070,
+      "sha256": "66a7c761ed3967cef425bd35292279bebc7b21e16ecc6a115bd143a8aa76fbdf"
+    },
+    "HYDRADB_SOURCE_BUILD.md": {
+      "bytes": 1712,
+      "sha256": "e3f46bf28eb23269a34da66e13eae43b6f5f2066ca322ff2dc4375a6b3ce30df"
+    },
+    "MIGRATION_FROM_CURRENT_REPO.md": {
+      "bytes": 1181,
+      "sha256": "836d2d69cdfe5a9d2cd741ca7d6b643459362bf22a8b99517c156d1205eabf7c"
+    },
+    "Makefile": {
+      "bytes": 1255,
+      "sha256": "be5ef55e74b2f9af92c5ef7997935a8d1ff315bd1db8bb4213fc003a7919d2fc"
+    },
+    "README.md": {
+      "bytes": 10681,
+      "sha256": "6968a192f6dc594675a352fee10c0562136ef00d076bd5bc9b5e12186b422fc7"
+    },
+    "REVIEW.md": {
+      "bytes": 1826,
+      "sha256": "07ce8187ab4c7497c251362ac46c56366211a394d568c3fed9f6ec1d672c1638"
+    },
+    "SOURCES.md": {
+      "bytes": 1671,
+      "sha256": "1f964454fbef8b2e4b85d0b482276ee7315d86947bc9e463a33de8c2538210e1"
+    },
+    "SUBMISSION.md": {
+      "bytes": 3910,
+      "sha256": "7f614592cd2a187b498a6e1838980ef987151e7c80611a4044b411c559064e77"
+    },
+    "SUCCESS_GATES.md": {
+      "bytes": 1512,
+      "sha256": "cc0bc6d735594d241cc6959c6904ed14ac2809db9dd3913c2f1d36633f09dcad"
+    },
+    "agent_handoff/EXTERNAL_AGENT_BRIEF.md": {
+      "bytes": 2275,
+      "sha256": "f559b0fc6da8e3cf357f2190f84deb6cf5e294a37f83c8c1660232f4137496a4"
+    },
+    "agent_handoff/RETURN_TEMPLATE.md": {
+      "bytes": 2090,
+      "sha256": "e86550cacb3086ce42cc3e7dbe3b01d3a2b2a9cdfc89d9597883837ef05a9a44"
+    },
+    "benchmarks/hydradb-cookbooks.toml": {
+      "bytes": 1591,
+      "sha256": "cabd01a39e0169fef58577f7c1b9df6becf19f4cb64dd74c5c91769d86b44214"
+    },
+    "crates/iolaus-bench/Cargo.toml": {
+      "bytes": 665,
+      "sha256": "f53b4b83c047a9d3d10655e247b64c949e9feaf754ee74b20d26a9958990fe4a"
+    },
+    "crates/iolaus-bench/src/hermes.rs": {
+      "bytes": 6954,
+      "sha256": "a3f0a1abff4548209acd14b32bdba2d19592545a0cad1637e36025348b4f7269"
+    },
+    "crates/iolaus-bench/src/lab.rs": {
+      "bytes": 8999,
+      "sha256": "86209030ff0632ba0fedb0edfbab114bdf15b7ad17fe021ac21ef359c76d1490"
+    },
+    "crates/iolaus-bench/src/lib.rs": {
+      "bytes": 164,
+      "sha256": "e11e6cccbd848198c1e97e9706cf543f01335a850d8acb3b9fba4bb1b1cfcbee"
+    },
+    "crates/iolaus-bench/src/live.rs": {
+      "bytes": 12028,
+      "sha256": "e112a9532ba464a4db17a9640b135c39bf9aedefe653b6785259bc71259b6953"
+    },
+    "crates/iolaus-bench/src/main.rs": {
+      "bytes": 9538,
+      "sha256": "c53c7226e2f133c49aefb625e459fb514be8b2a6cb68228ba22a84d5858c12e0"
+    },
+    "crates/iolaus-bench/src/runner.rs": {
+      "bytes": 28285,
+      "sha256": "634a7a9acd5e98299c3b1fc55d9bac692d0d2e830ca4df72fea1ddfafbe3259e"
+    },
+    "crates/iolaus-bench/src/suite.rs": {
+      "bytes": 1005,
+      "sha256": "ebddd211992f55f5ae40403285672a74344ecd689d89e8c7599bf93b39c76fa7"
+    },
+    "crates/iolaus-core/Cargo.toml": {
+      "bytes": 363,
+      "sha256": "c15b3d457f793c89dd30cef9c8232018cf7c237be806343d3cca938e989ed116"
+    },
+    "crates/iolaus-core/src/lib.rs": {
+      "bytes": 104,
+      "sha256": "414200d14676f5b346576caed293b9bc021a5cf2eaedf4acdc59212fe28e072e"
+    },
+    "crates/iolaus-core/src/model.rs": {
+      "bytes": 4242,
+      "sha256": "7db9e073ce21c4e75bc01506d65050277510b7325e61f3a1d24f5b4f2e2710d8"
+    },
+    "crates/iolaus-core/src/receipt.rs": {
+      "bytes": 5172,
+      "sha256": "b986f51fef524a7d63059e09a809c9bb254bfd73ffa34a92bd07772a62d30ebf"
+    },
+    "crates/iolaus-core/src/stats.rs": {
+      "bytes": 6081,
+      "sha256": "2c84886b0b552f855f93b6eb7c056ba8fd306d9818018c7d720617fe91d0bbdd"
+    },
+    "crates/iolaus-demo/Cargo.toml": {
+      "bytes": 358,
+      "sha256": "bdc4b2521527c18ff40e6479aedf5fd547a8dbf50b367bd93b97ae7f43053398"
+    },
+    "crates/iolaus-demo/src/main.rs": {
+      "bytes": 2505,
+      "sha256": "143b6307446546b65651fecfe3d3bcc9feb70f63e25b81507a656c7826ff54b7"
+    },
+    "crates/iolaus-demo/static/index.html": {
+      "bytes": 3129,
+      "sha256": "66fe497ccceb7f3becd393f2399005b4b0a3c20b20611a9eb1eda6beef505a7d"
+    },
+    "crates/iolaus-hydra/Cargo.toml": {
+      "bytes": 265,
+      "sha256": "60ca06bae74fe47fceee3b8db3c126ceb7310db0932c1c7d47807e9a4e871761"
+    },
+    "crates/iolaus-hydra/src/lib.rs": {
+      "bytes": 6264,
+      "sha256": "30d401b614fd2d13b68abcfd874a1cecc5135b71bac54d24888fcd697f5a9c84"
+    },
+    "docs/ARCHITECTURE.md": {
+      "bytes": 2893,
+      "sha256": "fec5384fe34f3f405cb5d221e7878af6ffa9ec6fd2ceaf304e4a7d4559a30af4"
+    },
+    "docs/COOKBOOK_BENCHMARK_MATRIX.md": {
+      "bytes": 1161,
+      "sha256": "c2130476115794a22e9a19273684ec52e8fa8b776103650e5c7909829673422b"
+    },
+    "docs/HYDRADB_EVIDENCE.md": {
+      "bytes": 2573,
+      "sha256": "fd10860b37e70c07032ce6f0fa954f13c76ef825f001a235ec9d8283d4b57fbe"
+    },
+    "docs/HYDRADB_GAP_MAP.md": {
+      "bytes": 4065,
+      "sha256": "68c66148a8ad9d30d58125fb114853a161beb3e331a67a7f1efb059a0141b8f6"
+    },
+    "docs/LIVE_HYDRADB.md": {
+      "bytes": 3458,
+      "sha256": "4804eab000235e264bf4935887101a73390ad60e607324d2ae6f5a2e65b4e7f1"
+    },
+    "docs/LLM_SCENARIO_DISCOVERY_POLICY.md": {
+      "bytes": 965,
+      "sha256": "676aeba8dd50144fe02223f741dd3a8fe5abb560072cbc73f2a1b730d5fcdce8"
+    },
+    "docs/POWER_ANALYSIS.md": {
+      "bytes": 2193,
+      "sha256": "0ccec43b72947cb7e630356d776ae4bf8b619f99d4a42bc08f512f88e8122ed6"
+    },
+    "docs/STATISTICS.md": {
+      "bytes": 1851,
+      "sha256": "98edd0e656b174f149b0815dedf39d2ff3b9c122d77f13709de86b9ba8c6bbb8"
+    },
+    "evidence/README.md": {
+      "bytes": 575,
+      "sha256": "63907ab4af0a08c9394cc1f2155404156d8039cb8888635a5bc8405c29e87288"
+    },
+    "fixtures/hydradb/edges.jsonl": {
+      "bytes": 2980,
+      "sha256": "8f121ec5ede78a35827767c2d925050cb20d9c752be9f1edaf3f247c89698865"
+    },
+    "fixtures/hydradb/functions.json": {
+      "bytes": 7910,
+      "sha256": "3cb3170e3d3863bcd4a0beb617a341b1f62a1b7d2e33b26570f549df35e55bd3"
+    },
+    "fixtures/hydradb/manifest.json": {
+      "bytes": 626,
+      "sha256": "857bdb7b6106630be08b5ea376ad14dbfcfcfcf6a2cdd351e264739eb0548f57"
+    },
+    "fixtures/hydradb/nodes.jsonl": {
+      "bytes": 10558,
+      "sha256": "c9e47519533cc5e45e7f248b5ea479a8f558e0a4a3a183bad2804384f4e5026a"
+    },
+    "fixtures/tasks/hydradb-live-tasks.json": {
+      "bytes": 3121,
+      "sha256": "2248aceb26ea6481a76b14d0304ba474c90a45b9e450502edac3968c8552dc7d"
+    },
+    "results/README.md": {
+      "bytes": 410,
+      "sha256": "866cef9555e7b48606c3faae7c32ae60f12d92e92ca9d641f8d27fd0e9d2d133"
+    },
+    "rust-toolchain.toml": {
+      "bytes": 86,
+      "sha256": "7458b2d74495e6fb1c1edeea4d5a793705476431dadb60627187111f91441e13"
+    },
+    "scripts/anti_cheat_audit.py": {
+      "bytes": 3616,
+      "sha256": "1b5acd4f9cafe5e0644062091c10f2d311bd884c1ad701b6bd21f16197f43411"
+    },
+    "scripts/build_hydradb_source.sh": {
+      "bytes": 3912,
+      "sha256": "c6bcf4d4690876788ed508be38143a5aada0598709a480b281e5af627672ee9f"
+    },
+    "scripts/capture_environment.sh": {
+      "bytes": 1019,
+      "sha256": "e77c776e3623f2fcefc62bc4fbc0a99efd3ab91316ae428a2d25a723cf5859f7"
+    },
+    "scripts/discover_hydradb_source.py": {
+      "bytes": 3447,
+      "sha256": "b3b55633a1409853bc92d984a52fc2c736568b3954415e83adcd1ff7ade5f485"
+    },
+    "scripts/generate_hydra_fixture.py": {
+      "bytes": 13905,
+      "sha256": "c45e3bdee5af02555d3e53ae1108885813b6508c6232dfe90d0a91f128d051b5"
+    },
+    "scripts/native_import_adapter.py": {
+      "bytes": 3473,
+      "sha256": "d8b534ea2a43853ada47575414e5c7c29bac5644d332a2e556575c39ecbc2261"
+    },
+    "scripts/run_all_gates.sh": {
+      "bytes": 603,
+      "sha256": "74244247c56b201f895267a840bcfcbd84e5d781988dd92b543f24f5fc87a05c"
+    },
+    "scripts/run_controlled_release.sh": {
+      "bytes": 733,
+      "sha256": "d1611e28209ad1d762c842c50c6e7eb8a3b17820303c7b598ba0951bf3764950"
+    },
+    "scripts/run_live_pipeline.sh": {
+      "bytes": 1516,
+      "sha256": "9bcc843c8c1dfb6e8f208344c61358e465e8e677dcfcc0ab5307a8ebb2640d49"
+    },
+    "scripts/start_hydradb_source.sh": {
+      "bytes": 1832,
+      "sha256": "3b38aa039e79084f5633331c24f119484aeab881804d2f4311f4ca3ab2ae45fb"
+    },
+    "scripts/static_release_check.py": {
+      "bytes": 577,
+      "sha256": "f3e35ba21acb838f56ce40058e180f84e3c8ef8293e137bbb76ad3101e061c6d"
+    },
+    "scripts/stop_hydradb_source.sh": {
+      "bytes": 441,
+      "sha256": "f8cb861728348b37c218b2f8cd2dd4644149904166b7b2a21e5cb2659242518b"
+    },
+    "scripts/validate_fixture.py": {
+      "bytes": 821,
+      "sha256": "dc4268c17c61c006c7221f548fa6764a149b52cd193b0a28ffa2b2671c29f297"
+    }
+  },
+  "generated_at": "2026-08-19T14:50:00Z",
+  "schema": "iolaus.handoff.manifest.v2"
+}

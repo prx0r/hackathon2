@@ -1,0 +1,353 @@
+[
+  {
+    "description": "Create a new CRM customer record. Use when a user asks to add, create, or register a customer/contact in CRM. Semantic success requires independent readback of the requested customer ID.",
+    "id": "create_customer",
+    "meta": {
+      "collections": [
+        "crm",
+        "write"
+      ],
+      "department": "sales",
+      "idempotent": true,
+      "side_effects": "Writes CRM state",
+      "verification": "crm_readback"
+    },
+    "name": "Create CRM customer",
+    "parameters": {
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "email"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Update stage, amount, owner, or notes on an existing CRM opportunity.",
+    "id": "update_crm_opportunity",
+    "meta": {
+      "collections": [
+        "crm",
+        "write"
+      ],
+      "department": "sales",
+      "idempotent": true
+    },
+    "name": "Update CRM opportunity",
+    "parameters": {
+      "properties": {
+        "opportunity_id": {
+          "type": "string"
+        },
+        "stage": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "opportunity_id",
+        "stage"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Post an internal message to a Slack channel or direct message. Prefer for time-sensitive internal communication.",
+    "id": "send_slack_message",
+    "meta": {
+      "collections": [
+        "communication"
+      ],
+      "department": "all",
+      "idempotent": false
+    },
+    "name": "Send Slack message",
+    "parameters": {
+      "properties": {
+        "channel": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "channel",
+        "text"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Send an external or formal email message to one or more recipients.",
+    "id": "send_email",
+    "meta": {
+      "collections": [
+        "communication"
+      ],
+      "department": "all",
+      "idempotent": false
+    },
+    "name": "Send email",
+    "parameters": {
+      "properties": {
+        "body": {
+          "type": "string"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "to": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "to",
+        "subject",
+        "body"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Create a calendar meeting or appointment with date, time and attendees.",
+    "id": "create_calendar_event",
+    "meta": {
+      "collections": [
+        "calendar"
+      ],
+      "department": "all",
+      "idempotent": false
+    },
+    "name": "Create calendar event",
+    "parameters": {
+      "properties": {
+        "start": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "start"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Deploy a named service or application. A transport-level success is not sufficient; semantic success requires an independent health readback.",
+    "id": "trigger_deployment",
+    "meta": {
+      "collections": [
+        "deploy",
+        "write"
+      ],
+      "department": "engineering",
+      "idempotent": false,
+      "verification": "health_probe"
+    },
+    "name": "Trigger deployment",
+    "parameters": {
+      "properties": {
+        "service": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "service"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Create or trigger an incident in PagerDuty for an operational alert.",
+    "id": "notify_pagerduty",
+    "meta": {
+      "collections": [
+        "incident"
+      ],
+      "department": "engineering",
+      "idempotent": false
+    },
+    "name": "Notify PagerDuty",
+    "parameters": {
+      "properties": {
+        "service": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "service",
+        "summary"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Create a Jira issue for work tracking, bug reports, or follow-up tasks.",
+    "id": "create_jira_ticket",
+    "meta": {
+      "collections": [
+        "project-management"
+      ],
+      "department": "all",
+      "idempotent": false
+    },
+    "name": "Create Jira ticket",
+    "parameters": {
+      "properties": {
+        "project": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "project",
+        "summary"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Queue a customer-support ticket for human handoff. Semantic success requires the handoff to exist in the queue.",
+    "id": "escalate_to_human",
+    "meta": {
+      "collections": [
+        "support",
+        "write"
+      ],
+      "department": "support",
+      "idempotent": true,
+      "verification": "queue_readback"
+    },
+    "name": "Escalate support ticket",
+    "parameters": {
+      "properties": {
+        "ticket_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ticket_id"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Upload a document or source for indexing. Accepted upload does not imply recall-ready; downstream use requires processing/indexing verification.",
+    "id": "upload_knowledge",
+    "meta": {
+      "collections": [
+        "knowledge",
+        "ingestion"
+      ],
+      "department": "all",
+      "idempotent": true,
+      "verification": "processing_ready"
+    },
+    "name": "Upload knowledge source",
+    "parameters": {
+      "properties": {
+        "source_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Answer a financial question from retrieved evidence. Output is trusted only when evidence is non-empty and matches the requested fiscal period.",
+    "id": "answer_financial_question",
+    "meta": {
+      "collections": [
+        "analysis"
+      ],
+      "department": "finance",
+      "idempotent": true,
+      "verification": "evidence_constraints"
+    },
+    "name": "Answer financial question",
+    "parameters": {
+      "properties": {
+        "period": {
+          "type": "string"
+        },
+        "question": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "question",
+        "period"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Generate a competitive-intelligence briefing from indexed source material. Do not publish until all required sources are processing-ready.",
+    "id": "generate_competitive_briefing",
+    "meta": {
+      "collections": [
+        "competitive-intelligence"
+      ],
+      "department": "strategy",
+      "idempotent": true,
+      "verification": "source_readiness"
+    },
+    "name": "Generate competitive briefing",
+    "parameters": {
+      "properties": {
+        "audience": {
+          "type": "string"
+        },
+        "source_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "audience"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Generate a general structured internal report from available context.",
+    "id": "generate_report",
+    "meta": {
+      "collections": [
+        "reporting"
+      ],
+      "department": "all",
+      "idempotent": true
+    },
+    "name": "Generate report",
+    "parameters": {
+      "properties": {
+        "topic": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "topic"
+      ],
+      "type": "object"
+    }
+  }
+]

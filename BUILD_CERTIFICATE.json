@@ -1,0 +1,56 @@
+{
+  "artifact": "Iolaus HydraDB + local Hermes LiveBench coding-agent handoff",
+  "claims_discipline": [
+    "Do not quote the prior 13.5% -> 0% result as this source revision until regenerated and certified.",
+    "Do not infer source-built HydraDB/Cypher success from the documented REST/API lane.",
+    "Do not infer native import success from importer exit status; require independent 43-node/19-edge count proof.",
+    "Do not use LLM output as deterministic postcondition evidence."
+  ],
+  "counts": {
+    "fixture_edges": 19,
+    "fixture_functions": 13,
+    "fixture_nodes": 43,
+    "manifest_files": 70,
+    "python_scripts": 6,
+    "rust_source_files": 13,
+    "shell_scripts": 7
+  },
+  "external_required_terminal_markers": [
+    "CONTROLLED_RELEASE_PASS",
+    "HYDRADB_SOURCE_BUILD_PASS",
+    "NATIVE_HYDRADB_IMPORT_PASS",
+    "HERMES_SMOKE_PASS",
+    "HYDRA_SMOKE_PASS",
+    "BOOTSTRAP_HYDRA_PASS",
+    "LIVE_HYDRADB_HERMES_PIPELINE_PASS",
+    "IOLAUS_ALL_GATES_PASS"
+  ],
+  "generated_at": "2026-08-19T14:50:00Z",
+  "manifest_sha256": "5e064831f390dfef6fc388ec607095bc58e7a1ea99b77e6ae93d1fc87d726e8a",
+  "not_executed_here": {
+    "cargo_clippy": "PACKAGER_HAS_NO_RUST_TOOLCHAIN",
+    "cargo_fmt": "PACKAGER_HAS_NO_RUST_TOOLCHAIN",
+    "cargo_test": "PACKAGER_HAS_NO_RUST_TOOLCHAIN",
+    "controlled_8000_pair_benchmark": "MUST_REGENERATE_ON_TARGET_HOST_FROM_FINAL_SOURCE",
+    "hydradb_native_graph_import": "TARGET_HYDRADB_RUNTIME_NOT_PRESENT",
+    "hydradb_source_server_runtime_build": "TARGET_HYDRADB_CHECKOUT_NOT_PRESENT",
+    "live_hydradb_hermes_benchmark": "TARGET_RUNTIME_AND_CREDENTIALS_REQUIRED",
+    "local_hermes_smoke": "TARGET_LOCAL_HERMES_NOT_PRESENT"
+  },
+  "schema": "iolaus.handoff.build-certificate.v2",
+  "status": "STATIC_HANDOFF_PASS_EXTERNAL_RUNTIME_GATES_REQUIRED",
+  "verified_in_packaging_environment": {
+    "anti_cheat_static_audit": "PASS",
+    "bash_syntax_all_scripts": "PASS",
+    "fixture_generation_and_validation": "PASS",
+    "json_parse": "PASS",
+    "native_import_adapter_selftest": "PASS",
+    "python_compileall": "PASS",
+    "rough_rust_brace_balance": "PASS",
+    "rust_todo_fixme_scan": "PASS",
+    "scenario_function_cross_reference": "PASS",
+    "source_discovery_adapter_selftest": "PASS",
+    "source_server_start_stop_adapter_selftest": "PASS",
+    "toml_parse": "PASS"
+  }
+}
